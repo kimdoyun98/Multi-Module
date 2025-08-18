@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Multi-Module"
 include(":app")
- 
+include(":build-logic")

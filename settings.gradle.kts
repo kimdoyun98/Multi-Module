@@ -26,3 +26,5 @@ gradle.startParameter.excludedTaskNames.addAll(listOf(":build-logic:convention:t
 
 rootProject.name = "Multi-Module"
 include(":app")
+include(":feature")
+include(":feature:main")

@@ -24,6 +24,7 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation(projects.core.navigation)
+    implementation(projects.core.ui)
     implementation(projects.feature.home)
     implementation(projects.feature.second)
 

@@ -2,7 +2,7 @@ import com.project.convention.implementation
 import org.gradle.kotlin.dsl.implementation
 
 plugins {
-    alias(libs.plugins.module.android.library)
+    alias(libs.plugins.module.feature)
 }
 
 android {
@@ -19,11 +19,6 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
-    implementation(projects.core.navigation)
-    implementation(projects.core.ui)
     implementation(projects.feature.home)
     implementation(projects.feature.second)
-
-    implementation(libs.androidx.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.ui.ktx)
 }

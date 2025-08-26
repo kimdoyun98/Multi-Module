@@ -8,8 +8,8 @@ import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.provideDelegate
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.dsl.KotlinAndroidProjectExtension
+import org.jetbrains.kotlin.gradle.dsl.KotlinBaseExtension
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmProjectExtension
-import org.jetbrains.kotlin.gradle.dsl.KotlinTopLevelExtension
 
 @Suppress("UnstableApiUsage")
 internal fun Project.configureAndroid(commonExtension: CommonExtension<*, *, *, *, *, *>) {
@@ -40,7 +40,7 @@ internal fun Project.configureAndroid(commonExtension: CommonExtension<*, *, *, 
     }
 }
 
-inline fun <reified T : KotlinTopLevelExtension> Project.configureKotlin() = configure<T> {
+inline fun <reified T : KotlinBaseExtension> Project.configureKotlin() = configure<T> {
     val warningsAsErrors: String? by project
     when (this) {
         is KotlinAndroidProjectExtension -> compilerOptions

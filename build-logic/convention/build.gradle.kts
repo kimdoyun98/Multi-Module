@@ -38,6 +38,11 @@ gradlePlugin {
                 id = "module.hilt"
                 implementationClass = "HiltPlugin"
             }
+
+            register("Feature") {
+                id = "module.feature"
+                implementationClass = "FeaturePlugin"
+            }
         }
     }
 }

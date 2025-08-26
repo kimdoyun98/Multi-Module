@@ -1,1 +1,4 @@
-<resources></resources>
+<resources>
+    <string name="home">home</string>
+    <string name="second">second</string>
+</resources>

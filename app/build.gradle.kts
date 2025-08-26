@@ -12,11 +12,6 @@ android {
 }
 
 dependencies {
-
-    implementation(libs.androidx.core.ktx)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-
     implementation(projects.feature.main)
+    implementation(projects.core.navigation)
 }

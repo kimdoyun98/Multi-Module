@@ -28,3 +28,7 @@ rootProject.name = "Multi-Module"
 include(":app")
 include(":feature")
 include(":feature:main")
+include(":core")
+include(":core:navigation")
+include(":feature:home")
+include(":feature:second")

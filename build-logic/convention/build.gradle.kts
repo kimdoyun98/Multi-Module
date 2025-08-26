@@ -33,6 +33,11 @@ gradlePlugin {
                 id = "module.compose"
                 implementationClass = "ComposeConventionPlugin"
             }
+
+            register("Hilt") {
+                id = "module.hilt"
+                implementationClass = "HiltPlugin"
+            }
         }
     }
 }

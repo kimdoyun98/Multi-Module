@@ -1,9 +1,9 @@
 import com.android.build.gradle.TestExtension
+import com.project.convention.androidTestImplementation
 import com.project.convention.configureAndroid
 import com.project.convention.getLibrary
-import com.project.convention.implementation
-import com.project.convention.ksp
 import com.project.convention.libs
+import com.project.convention.testImplementation
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
@@ -15,7 +15,6 @@ class AndroidTestConventionPlugin : Plugin<Project> {
             with(pluginManager) {
                 apply("com.android.test")
                 apply("org.jetbrains.kotlin.android")
-                apply("com.google.devtools.ksp")
             }
 
             extensions.configure<TestExtension> {
@@ -23,11 +22,9 @@ class AndroidTestConventionPlugin : Plugin<Project> {
             }
 
             dependencies {
-                implementation(libs.getLibrary("androidx.test.core"))
-                implementation(libs.getLibrary("androidx.compose.ui.test.junit4"))
-                implementation(libs.getLibrary("hilt.android"))
-                implementation(libs.getLibrary("hilt.android.testing"))
-                ksp(libs.getLibrary("hilt.compiler"))
+                testImplementation(libs.getLibrary("junit"))
+                androidTestImplementation(libs.getLibrary("androidx.junit"))
+                androidTestImplementation(libs.getLibrary("androidx.espresso.core"))
             }
         }
     }

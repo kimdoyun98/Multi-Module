@@ -54,3 +54,4 @@ module-android-application = { id = "module.android.application", version = "uns
 module-android-library = { id = "module.android.library", version = "unspecified" }
 module-android-test = { id = "module.android.test", version = "unspecified" }
 module-compose = { id = "module.compose", version = "unspecified" }
+module-hilt = { id = "module.hilt", version = "unspecified" }

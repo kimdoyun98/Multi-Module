@@ -18,8 +18,6 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
             with(pluginManager) {
                 apply("com.android.library")
                 apply("org.jetbrains.kotlin.android")
-                apply("com.google.devtools.ksp")
-                apply("dagger.hilt.android.plugin")
             }
 
             extensions.configure<LibraryExtension> {
@@ -29,9 +27,7 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
             configureKotlin<KotlinAndroidProjectExtension>()
 
             dependencies {
-                implementation(libs.getLibrary("hilt.android"))
-                ksp(libs.getLibrary("hilt.compiler"))
-                androidTestImplementation(libs.getLibrary("hilt.android.testing"))
+
             }
         }
     }

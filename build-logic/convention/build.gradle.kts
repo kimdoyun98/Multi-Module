@@ -21,17 +21,15 @@ gradlePlugin {
                 id = "module.android.application"
                 implementationClass = "AndroidApplicationConventionPlugin"
             }
+
             register("AndroidLibrary") {
                 id = "module.android.library"
                 implementationClass = "AndroidLibraryConventionPlugin"
             }
+
             register("AndroidTest") {
                 id = "module.android.test"
                 implementationClass = "AndroidTestConventionPlugin"
-            }
-            register("Compose") {
-                id = "module.compose"
-                implementationClass = "ComposeConventionPlugin"
             }
 
             register("Hilt") {
